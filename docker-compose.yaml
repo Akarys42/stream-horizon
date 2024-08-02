@@ -1,9 +1,9 @@
 version: "3.8"
 services:
-  app:
+  chat-ws:
     build:
       context: .
-      dockerfile: Dockerfile
-    volumes:
-      - .:/app:rw
+      dockerfile: chat-ws.Dockerfile
     tty: true
+    ports:
+      - "23930:23930"

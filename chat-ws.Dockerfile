@@ -1,10 +1,10 @@
-FROM --platform=linux/amd64 python:3.10-slim
+FROM python:3.10-slim
 
 # Set pip to have no saved cache
 ENV PIP_NO_CACHE_DIR=false \
     POETRY_VIRTUALENVS_CREATE=false
 
-CMD ["python", "-m", "app"]
+CMD ["python", "-m", "chat_ws"]
 
 WORKDIR /app
 
